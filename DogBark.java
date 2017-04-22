@@ -5,12 +5,12 @@
 class Dog{
     String name;
     String says;
+    void bark(){
+        System.out.println(name + " says:" + says);
+    }
 }
 
 public class DogBark {
-    static void bark(Dog d){
-        System.out.println(d.name + " barks:" + d.says);
-    }
     public static void main(String[] args){
         Dog dog_1 = new Dog();
         Dog dog_2 = new Dog();
@@ -18,7 +18,7 @@ public class DogBark {
         dog_2.name="scruffy";
         dog_1.says="\"Ruff!\"";
         dog_2.says="\"Wurf!\"";
-        bark(dog_1);
-        bark(dog_2);
+        dog_1.bark();
+        dog_2.bark();
     }
 }
